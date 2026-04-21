@@ -1,0 +1,251 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f3f7fb;
+  color: #1f2937;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #cfd9e3;
+  border-radius: 10px;
+}
+
+.container {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.header {
+  background: #0a84ff;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.menu {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.page {
+  padding: 26px 0 40px;
+}
+
+.small-page {
+  max-width: 500px;
+}
+
+.hero-block {
+  background: linear-gradient(135deg, #1ea5fc, #0a84ff);
+  color: white;
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  padding: 18px;
+}
+
+.search-box {
+  margin-bottom: 20px;
+}
+
+.search-grid,
+.admin-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.cards-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.flight-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.flight-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.label {
+  display: inline-block;
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+
+.price {
+  font-size: 28px;
+  font-weight: bold;
+  color: #0a84ff;
+}
+
+.btn,
+.small-btn {
+  border: none;
+  background: #0a84ff;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn {
+  padding: 12px 16px;
+}
+
+.small-btn {
+  padding: 10px 12px;
+}
+
+.danger {
+  background: #dc2626;
+}
+
+.form-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.info-box,
+.error-box {
+  padding: 14px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.info-box {
+  background: #e0f2fe;
+}
+
+.error-box {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.admin-form {
+  margin-bottom: 24px;
+}
+
+.row-gap {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.table-wrap {
+  overflow: auto;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.chat-box {
+  padding: 0;
+  overflow: hidden;
+}
+
+.chat-messages {
+  height: 420px;
+  overflow: auto;
+  padding: 16px;
+  background: #f8fafc;
+}
+
+.chat-message {
+  background: white;
+  border-radius: 12px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+.chat-send-row {
+  display: grid;
+  grid-template-columns: 1fr 160px;
+  gap: 12px;
+  padding: 16px;
+}
+
+@media (max-width: 900px) {
+  .search-grid,
+  .admin-grid,
+  .admin-stats,
+  .flight-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav {
+    padding: 12px 0;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .chat-send-row {
+    grid-template-columns: 1fr;
+  }
+}
